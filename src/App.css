@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+body{
+  background-color: #2d3739;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+
+background-image: linear-gradient(to right, teal ,aquamarine);
+height: 8vh;
+animation: nav 2s ease ;
+/* font-family: 'Lobster', cursive;*/
+font-family: 'Fredoka One', cursive;
+font-size: 45px;
+padding-bottom: 10px;
+color: whitesmoke; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.app{
+text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+margin-top: 80px;
+border: 5px solid #24b675;
+border-radius: 25px;
+/*margin-left: 200px;*/
+margin-right: 200px; 
+animation: container 2s ease ;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: large;
+padding-top: 10px;
+width: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.txt-box{
+border-radius: 10px;
+height: 10px;
+margin: 10px;
+margin-bottom: 20px;
+padding: 10px;
+transition: 0.3s;
+border: none;
+outline: none;
+/*background-color: #2d3739;*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.txt-box:focus{
+border-color: dodgerblue;
+box-shadow: 0 0 10px 0 dodgerblue;
+outline: none;
+}
+
+.container li{
+color: white;
+
+}
+
+b{
+font-size: 20px;
+}
+
+
+
+.add-btn{
+border-radius: 20px;
+margin-left: 10px;
+height: 30px;
+width: 30px;
+border: none;
+background-color: lightgreen;
+color: white;
+outline: none;
+}
+
+.del-btn{
+border-radius: 20px;
+margin-left: 10px;
+height: 30px;
+width: 30px;
+border: none;
+background-color: #d11a2a;
+color: white;
+outline: none;
+}
+
+@keyframes nav{
+from{
+    opacity: 0;
+    transform: translateY(-30px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0px);
+}
+}
+
+@keyframes container{
+from{
+  opacity: 0;
+  transform: translateY(50px);
+}
+to {
+opacity: 1;
+transform: translateY(0px);
+}
 }
