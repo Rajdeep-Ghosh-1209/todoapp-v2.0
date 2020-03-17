@@ -9,8 +9,16 @@ class App extends Component {
 
     this.state={
       newItem:"",
-      list:[]
+      list:[],
+      term:""
     }
+
+    this.searchHandler = this.searchHandler.bind(this);
+    this.keyPressed = this.keyPressed.bind(this);
+  }
+
+  searchHandler(event){
+    this.setState({term: event.target.value})
   }
 
   componentDidMount(){
@@ -68,6 +76,13 @@ class App extends Component {
     })
   }
 
+  keyPressed(event){
+      if(event.key==="Enter"){
+        this.addItem(); 
+      }
+
+  }
+
   addItem(){
     //create item with unique id
     const newItem={
@@ -105,19 +120,21 @@ class App extends Component {
         <nav>
         t o D o - L i s t
         </nav>
-     <div className="container">
+       <div className="container">
         <div>
            Add an Item..
            <br/>
            <input
               type="text"
-              className="txt-box"
               placeholder="Type here.."
+              className="txt-box"
              value= {this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}
+              onKeyPress={e => this.keyPressed(e)}                   
             />  
             <button
               className="add-btn" 
+              
               onClick={ () => this.addItem() }
             >
              <b>+</b> 
@@ -125,20 +142,21 @@ class App extends Component {
             <br/>
             
               {this.state.list.map(item => {
-                return(
-                   <li key={item.id}>
-                    {item.value}
-                    <button
-                      className="del-btn"
-                      onClick={ () => this.deleteItem(item.id)}
-                    >
-                      <b>X</b>
-                    </button>    
-                  </li>
-                )
-              })}
-            
-
+                    return(
+                        <ul>
+                            <li key={item.id}>
+                              {item.value}   
+                              <button
+                              className="del-btn"
+                              onClick={ () => this.deleteItem(item.id)}
+                              >
+                              <b>X</b>
+                              </button>    
+                            </li>
+                          </ul>
+                          )
+            })}
+                
           </div>
      </div>
      </div>
