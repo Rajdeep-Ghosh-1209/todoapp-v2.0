@@ -7,13 +7,13 @@ nav{
 
 background-image: linear-gradient(to right, teal ,aquamarine);
 height: 8vh;
-width: 100%;
 animation: nav 2s ease ;
 /* font-family: 'Lobster', cursive;*/
 font-family: 'Fredoka One', cursive;
 font-size: 45px;
 padding-bottom: 10px;
 color: whitesmoke; 
+width: 100%;
 }
 
 
@@ -26,13 +26,13 @@ margin-top: 80px;
 border: 5px solid #24b675;
 border-radius: 25px;
 /*margin-left: 200px;*/
-margin-right: 200px; 
+/*margin-right: 200px;*/ 
 animation: container 2s ease ;
-color: white;
+color:  white;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-size: large;
 padding-top: 10px;
-width: 100%;
+width: auto;
 
 }
 
@@ -55,8 +55,8 @@ outline: none;
 }
 
 .container li{
-color: white;
-
+   color: white;
+   margin-left: 10px;  
 }
 
 b{
@@ -79,12 +79,14 @@ outline: none;
 .del-btn{
 border-radius: 20px;
 margin-left: 10px;
+margin-right: 30px;  
 height: 30px;
 width: 30px;
 border: none;
 background-color: #d11a2a;
 color: white;
 outline: none;
+float: right;
 }
 
 @keyframes nav{
