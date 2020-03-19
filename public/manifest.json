@@ -1,6 +1,7 @@
 {
   "short_name": "ToDo-App",
-  "name": "Created by Rajdeep Ghosh",
+  "name": "    F R O M 
+            Rajdeep Ghosh",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +20,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
